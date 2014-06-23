@@ -230,38 +230,6 @@ pre {
     pre details summary {
       line-height: 1.2; }
 
-details {
-  padding: 0;
-  margin: 0;
-  clear: none;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
-  details summary {
-    -webkit-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    cursor: pointer;
-    clear: none;
-    padding: 0;
-    margin: 0;
-    background: rgba(0, 0, 0, 0.025);
-    outline: none;
-    padding: .1em; }
-    details summary:hover {
-      background: rgba(0, 0, 0, 0.045); }
-    details summary + details {
-      margin-top: -1em; }
-  details[open] {
-    color: #C7254E; }
-    details[open] summary {
-      background: rgba(0, 0, 0, 0.1);
-      color: #333; }
-      details[open] summary + details summary {
-        background: rgba(0, 0, 0, 0.025); }
-      details[open] summary + details[open] summary {
-        background: rgba(0, 0, 0, 0.1); }
-
 /* ====================================================================================================
 Colors : Here you define your color palette & colorscheme, we defined some fresh colors for you
 ======================================================================================================*/
@@ -398,7 +366,8 @@ body {
   position: relative;
   z-index: 1;
   margin-bottom: 0;
-  color: #333333; }
+  color: #333333;
+  box-shadow: inset 0 -5em 10em #f3f3f5, inset 0 -5em 10em #f3f3f5; }
   .jumbotron h1 {
     font-size: 3em;
     margin-top: 60px;
@@ -409,6 +378,94 @@ body {
     margin: auto; }
   .jumbotron .btn {
     clear: both; }
+
+pre.inv {
+  background: #333;
+  color: #fff; }
+
+*[class*="addons"] {
+  color: #3498db; }
+  *[class*="addons"] summary {
+    color: #3498db; }
+*[class*="themes"] {
+  color: #f1c40f; }
+  *[class*="themes"] summary {
+    color: #f1c40f; }
+*[class*="base"] {
+  color: #1abc9c; }
+  *[class*="base"] summary {
+    color: #1abc9c; }
+*[class*="components"] {
+  color: #e67e22; }
+  *[class*="components"] summary {
+    color: #e67e22; }
+*[class*="core"] {
+  color: #e74c3c; }
+  *[class*="core"] summary {
+    color: #e74c3c; }
+*[class*="utils"] {
+  color: #9b59b6; }
+  *[class*="utils"] summary {
+    color: #9b59b6; }
+
+details {
+  padding: 0;
+  margin: 0;
+  clear: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  details summary {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    clear: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.025);
+    outline: none;
+    padding: .1em; }
+    details summary:hover {
+      background: rgba(0, 0, 0, 0.045); }
+    details summary + details {
+      margin-top: -1em; }
+  details[open] summary {
+    background: rgba(0, 0, 0, 0.1); }
+    details[open] summary + details summary {
+      background: rgba(0, 0, 0, 0.025); }
+    details[open] summary + details[open] summary {
+      background: rgba(0, 0, 0, 0.1); }
+
+.indicators {
+  width: 100%;
+  clear: both;
+  float: left; }
+  .indicators [class*="ind_"] {
+    padding: .4em;
+    background: #ccc;
+    margin: .2em;
+    float: left;
+    color: #fff;
+    font-weight: bold; }
+    .indicators [class*="ind_"][class*="addons"] {
+      background: #3498db; }
+    .indicators [class*="ind_"][class*="base"] {
+      background: #1abc9c; }
+    .indicators [class*="ind_"][class*="components"] {
+      background: #e67e22; }
+    .indicators [class*="ind_"][class*="core"] {
+      background: #e74c3c; }
+    .indicators [class*="ind_"][class*="theme"] {
+      background: #f1c40f; }
+    .indicators [class*="ind_"][class*="utils"] {
+      background: #9b59b6; }
+
+.page-section .btn-cta {
+  width: 260px;
+  margin: 1em auto;
+  display: block;
+  float: none; }
 
 /* ADDONS
 ---------------------------------------------------------------------------*/
