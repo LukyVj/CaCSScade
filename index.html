@@ -57,27 +57,97 @@
   </section>
 
     <section>
+    <div class="indicators">
+      <span class="ind_addons">Addons</span>
+      <span class="ind_base">Base</span>
+      <span class="ind_components">Components</span>
+      <span class="ind_core">Core</span>
+      <span class="ind_theme">Theme</span>
+      <span class="ind_utils">Utils</span>
+    </div>
       <pre><code>index.html
 |
 |_ ovcss.css
   |
-  |_ ovcss/_normalize.css
+  |_ ovcss/
          |
-<details> <summary>       |_ addons/</summary>        |    |_debug.scss
-         |    |_shame.scss</details><details> <summary>       |_ base/</summary><details><summary>       |    |_ core/</summary>         |    |   |_variables.scss
+<details class="addons"> <summary>       |_ addons/</summary>        |    |_debug.scss
+         |    |_shame.scss</details><details class="base"> <summary>       |_ base/</summary><details class="core"><summary>       |    |_ core/</summary>         |    |   |_variables.scss
          |    |   |_functions.scss
          |    |   |_mixins.scss</details>         |    |
          |    |_base.scss
          |    |_colors.scss
          |    |_form.scss
          |    |_normalize.scss
-         |    |_typography.scss</details><details><summary>       |_ components/</summary>         |    |_buttons.scss
+         |    |_typography.scss</details><details class="components"><summary>       |_ components/</summary>         |    |_buttons.scss
          |    |_icons.scss
-         |    |_images.scss</details><details><summary>       |_ theme/</summary>         |    |_over-bootstrap.scss</details><details><summary>       |_ utils/</summary>         |    |_animations.scss
+         |    |_images.scss</details><details class="themes"><summary class="theme">       |_ theme/</summary>         |    |_over-bootstrap.scss</details><details  class="utils"><summary>       |_ utils/</summary>         |    |_animations.scss
          |    |_classes.scss
-         |    |_responsive.scss</details>         |_ global.scss
+         |    |_responsive.scss</details>         |_ normalize.css
+         |_ global.scss
          |_ settings.scss</code></pre>
   </section>
+
+  <section>
+    <div class="page-header">
+      <h1>Add structure to your CSS <small>Because cleaner is better.</small></h1>
+    </div>
+    <div class="page-section">
+    <p>Here is the <code>settings.scss</code> file.</p>
+<pre class="inv"><code>/* BASE
+---------------------------------------------------------------------------*/
+<span class="base">@import 'base/_normalize.scss';         // Import the mixins.</span>
+<span class="core">@import 'base/core/_variables.scss';    // Import the mixins.</span>
+<span class="core">@import 'base/core/_functions.scss';    // Import the mixins.</span>
+<span class="core">@import 'base/core/_mixins.scss';       // Import the mixins.</span>
+<span class="base">@import 'base/_typography.scss';        // Import your typography stylesheet.</span>
+<span class="base">@import 'base/_base.scss';              // Import your Base Stylesheet.</span>
+<span class="base">@import 'base/_colors.scss';            // Import your colorscheme first.</span>
+<span class="base">@import 'base/_form.scss';              // Import the form stylesheet.</span>
+
+<span class="components">@import 'components/_icons.scss';       // Import the icon fonts.</span>
+<span class="components">@import 'components/_buttons.scss';     // Import the Buttons stylesheet ( After the colors, the typograhy).</span>
+
+<span class="themes">@import 'theme/_over-bootstrap.scss';   // Rerwite over bootstrap style</span>
+
+
+
+/* GLOBAL STYLESHEET
+---------------------------------------------------------------------------*/
+<span>@import '_global.scss' ;                // Global stylesheet</span>
+
+
+/* ADDONS
+---------------------------------------------------------------------------*/
+<span class="utils">@import 'utils/_classes.scss';          // Import the Classes file.</span>
+<span class="utils">@import 'utils/_animations.scss';       // Import the keyframes animations stylesheet.</span>
+<span class="utils">@import 'utils/_responsive.scss';       // Responsive stylesheet, for media-queries</span>
+
+<span class="addons">@import 'addons/_shame.scss';           // If it's a hack, it goes in shame.css .</span>
+</code></pre>
+    </div>
+  </section>
+
+   <section>
+    <div class="page-header">
+      <h1>Wanna give it a try ? <small>Yeah, you already love it.</small></h1>
+    </div>
+    <div class="page-section">
+      <a href="http://lukyvj.github.io/CaCSScade" class="btn btn-cta">Explore the repo</a>
+      <a href="http://lukyvj.github.io/CaCSScade" class="btn btn-cta">Download CaCSScade</a>
+    </div>
+  </section>
+
+   <section>
+    <div class="page-header">
+      <h1>Add super-powers to your CSS <small>Because superpowers are cool.</small></h1>
+    </div>
+    <div class="page-section">
+      <p>There is already a cool frameworks that comes with CaCSScade, it's called EfficaCSS, and it's like steroid for CSS</p>
+      <a href="http://lukyvj.github.io/EfficaCSS" class="btn btn-cta btn-center">Discover EfficaCSS</a>
+    </div>
+  </section>
+
   </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>

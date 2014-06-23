@@ -31,47 +31,4 @@ pre{
     }
   }
 }
-details{
-  padding: 0;
-  margin:0;
-  clear: none;
-  @include transition(all .2s ease);
-  summary{
-    @include transition(all .2s ease);
-    cursor: pointer;
-    clear: none;
-    padding: 0;
-    margin:0;
-    background: rgba(black, .025);
-    outline: none;
-    padding: .1em;
 
-    &:hover{
-          background: rgba(black, .045);
-
-    }
-    + details{
-      margin-top: -1em;
-    }
-  }
-
-  &[open]{
-    color: #C7254E;
-    summary{
-      background: rgba(black, .1);
-      color: #333;
-
-        + details {
-            summary{
-              background: rgba(black, .025);
-            }
-
-          &[open]{
-            summary{
-               background: rgba(black, .1);
-            }
-          }
-        }
-      }
-    }
-}

@@ -20,6 +20,7 @@ body{
   z-index: 1;
   margin-bottom: 0;
   color: $bl;
+  box-shadow: inset 0 -5em 10em $white,inset 0 -5em 10em $white;
 
   h1{
     font-size: 3em;
@@ -35,7 +36,136 @@ body{
     clear: both;
   }
 }
+pre.inv{
+  background: #333;
+  color: #fff;
+}
+*{
+  &[class*="addons"]{
+  color: $color-addons;
+  summary{
+    color: $color-addons;
+  }
+}
+&[class*="themes"]{
+  color: $color-themes;
+ summary{
+    color: $color-themes;
+  }
+}
+&[class*="base"]{
+  color: $color-base;
+ summary{
+    color: $color-base;
+  }
+}
+&[class*="components"]{
+  color: $color-components;
+   summary{
+    color: $color-components;
+  }
+}
 
+&[class*="core"]{
+  color: $color-core;
+   summary{
+    color: $color-core;
+  }
+}
+&[class*="utils"]{
+  color: $color-utils;
+   summary{
+    color: $color-utils;
+  }
+}
+}
+details{
+  padding: 0;
+  margin:0;
+  clear: none;
+  @include transition(all .2s ease);
 
-.container{
+  summary{
+    @include transition(all .2s ease);
+    cursor: pointer;
+    clear: none;
+    padding: 0;
+    margin:0;
+    background: rgba(black, .025);
+    outline: none;
+    padding: .1em;
+
+    &:hover{
+          background: rgba(black, .045);
+
+    }
+    + details{
+      margin-top: -1em;
+    }
+  }
+
+  &[open]{
+    //color: #C7254E;
+    summary{
+      background: rgba(black, .1);
+      //color: #333;
+
+        + details {
+            summary{
+              background: rgba(black, .025);
+            }
+
+          &[open]{
+            summary{
+               background: rgba(black, .1);
+            }
+          }
+        }
+      }
+    }
+}
+
+.indicators{
+  [class*="ind_"]{
+    padding: .4em;
+    background: #ccc;
+    margin: .2em;
+    float: left;
+    color: #fff;
+    font-weight: bold;
+
+    &[class*="addons"]{
+      background: #3498db;
+    }
+     &[class*="base"]{
+      background: #1abc9c;
+    }
+     &[class*="components"]{
+      background: #e67e22;
+    }
+     &[class*="core"]{
+      background: #e74c3c;
+    }
+     &[class*="theme"]{
+      background: #f1c40f;
+    }
+     &[class*="utils"]{
+      background: #9b59b6;
+    }
+  }
+  width: 100%;
+  clear: both;
+  float: left;
+}
+
+.page-section{
+    .btn-cta{
+      margin: 1em 0;
+    }
+    .btn-center{
+      width: 260px;
+      margin:1em auto;
+      display: block;
+      float: none;
+    }
 }
