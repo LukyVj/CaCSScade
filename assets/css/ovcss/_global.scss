@@ -1,0 +1,41 @@
+// ==========================================================================
+// CaCSScade  GLOBAL  settings :
+// ==========================================================================
+
+/* base setting
+-----------------------------------------------------------------------*/
+
+body{
+  background: $white;
+}
+/* Jumbotron
+-----------------------------------------------------------------------*/
+.jumbotron{
+  height: 100%;
+  @include full-background($white,"http://38.media.tumblr.com/22619c517a1502b0eb6aa4e3a933006f/tumblr_n6et0idQ131st5lhmo1_1280.jpg");
+  //background-attachment: fixed;
+  background-position-y: 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  color: $bl;
+
+  h1{
+    font-size: 3em;
+    margin-top: 60px;
+    @include font-family(#{$font-name}-semibold, $font-fallback, sans-serif);
+  }
+  img{
+      max-width: 80px;
+      clear: both;
+      margin: auto;
+  }
+  .btn{
+    clear: both;
+  }
+}
+
+
+.container{
+}

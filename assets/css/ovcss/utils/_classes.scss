@@ -1,0 +1,23 @@
+// ====================================================================================================
+// Classes : This library could be named helpers.css, here you will find all technical classes
+// (ex : .hide, .clearfix, .fix )
+// ====================================================================================================
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.fadeOut{
+  @include transition(all, .3s ease 0s ,opacity .3s ease);
+  opacity: 0;
+}
+
+
+.slider{
+  li.active{
+    @include animation(appear .3s ease);
+    @include transform(scale(1));
+  }
+}

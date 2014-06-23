@@ -1,0 +1,523 @@
+@charset "UTF-8";
+/*! CaCSScade v0.0.1 | MIT License | http://lucasbonomi.com/MIT */
+/*
+ * The following stylesheet is the main style.scss of your new CaCSScade project.
+ * The stylesheet uses normalize (http://necolas.github.io/normalize.css/) &
+ * bourbon (http://bourbon.io/).
+ *
+ */
+/* ==========================================================================
+OVCSS Settings library :
+========================================================================== */
+/* BASE
+---------------------------------------------------------------------------*/
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+a {
+  background: transparent; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+ /* Start mixins, reset ect
+-------------------------------------------------------------------*/
+/* Helper : Border-radius
+-------------------------------------------------------------------*/
+/* Helper : Borders
+-------------------------------------------------------------------*/
+/*
+-----------------------------------------------------------------*/
+/* Font
+-----------------------------------------------------------------*/
+/* borders
+-----------------------------------------------------------------*/
+/* single element
+-----------------------------------------------------------------*/
+/* Square
+------------------------------------------------------------------*/
+/* Backgrounds
+------------------------------------------------------------------*/
+/* Helper & debug mixins
+----------------------------------------------------------------*/
+/* Grid
+---------------------------------------------------------------*/
+@font-face {
+  font-family: ProximaNova-Regular;
+  src: url("../fonts/ProximaNova/ProximaNova-Regular.eot?") format("eot"), url("../fonts/ProximaNova/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg"), url("../fonts/ProximaNova/ProximaNova-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: ProximaNova-Light;
+  src: url("../fonts/ProximaNova/ProximaNova-Light.eot?") format("eot"), url("../fonts/ProximaNova/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Light.svg#ProximaNova-Light") format("svg"), url("../fonts/ProximaNova/ProximaNova-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: ProximaNova-Bold;
+  src: url("../fonts/ProximaNova/ProximaNova-Bold.eot?") format("eot"), url("../fonts/ProximaNova/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Bold.svg#ProximaNova-Bold") format("svg"), url("../fonts/ProximaNova/ProximaNova-Bold.ttf") format("truetype"); }
+@font-face {
+  font-family: ProximaNova-Semibold;
+  src: url("../fonts/ProximaNova/ProximaNova-Semibold.eot?") format("eot"), url("../fonts/ProximaNova/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova/ProximaNova-Semibold.svg#ProximaNova-Semibold") format("svg"), url("../fonts/ProximaNova/ProximaNova-Semibold.ttf") format("truetype"); }
+/* Typographic media queries */
+@media all and (max-width: 40em) {
+  html, body {
+    line-height: 22px; } }
+@media all and (max-width: 60em) {
+  html, body {
+    line-height: 24px; } }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  line-height: 24px; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-family: ProximaNova-light, "Helvetica", sans-serif; }
+
+html {
+  overflow-x: hidden; }
+
+strong {
+  font-family: ProximaNova-semibold, "Helvetica", sans-serif;
+  font-weight: bold; }
+
+pre {
+  line-height: 1.2; }
+  pre code {
+    line-height: 0; }
+  pre details {
+    line-height: 1.2; }
+    pre details summary {
+      line-height: 1.2; }
+
+details {
+  padding: 0;
+  margin: 0;
+  clear: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  details summary {
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    clear: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.025);
+    outline: none;
+    padding: .1em; }
+    details summary:hover {
+      background: rgba(0, 0, 0, 0.045); }
+    details summary + details {
+      margin-top: -1em; }
+  details[open] {
+    color: #C7254E; }
+    details[open] summary {
+      background: rgba(0, 0, 0, 0.1);
+      color: #333; }
+      details[open] summary + details summary {
+        background: rgba(0, 0, 0, 0.025); }
+      details[open] summary + details[open] summary {
+        background: rgba(0, 0, 0, 0.1); }
+
+/* ====================================================================================================
+Colors : Here you define your color palette & colorscheme, we defined some fresh colors for you
+======================================================================================================*/
+/* Shortcuts
+--------------------------------------------------------------------------------------------------*/
+/* Theme
+--------------------------------------------------------------------------------------------------*/
+form input {
+  outline: none; }
+  form input::-webkit-input-placeholder {
+    color: black; }
+  form input::-moz-placeholder {
+    color: black; }
+  form input:-moz-placeholder {
+    color: black; }
+  form input:-ms-input-placeholder {
+    color: black; }
+
+.footer-ico[class*="ico-phone"]:before {
+  background: url("../images/svg/footer/footer_phone.svg") no-repeat center center;
+  background-size: contain; }
+
+.footer-ico[class*="ico-twitter"]:before {
+  background: url("../images/svg/footer/footer_twitter.svg") no-repeat center center;
+  background-size: contain; }
+
+.footer-ico[class*="ico-mail"]:before {
+  background: url("../images/svg/footer/footer_mail.svg") no-repeat center center;
+  background-size: contain; }
+
+.footer-ico[class*="ico-facebook"]:before {
+  background: url("../images/svg/footer/footer_facebook.svg") no-repeat center center;
+  background-size: contain; }
+
+.footer-ico[class*="ico-dribbble"]:before {
+  background: url("../images/svg/footer/footer_dribbble.svg") no-repeat center center;
+  background-size: contain; }
+
+.footer-ico[class*="ico-instagram"]:before {
+  background: url("../images/svg/footer/footer_instagram.svg") no-repeat center center;
+  background-size: contain; }
+
+/* SVG Icons
+------------------------------------------------------------------------------*/
+.task-ico {
+  display: block;
+  width: 2.75em;
+  height: 2.75em;
+  margin: 1em auto; }
+
+.task-ico[class*="accounting_services"] {
+  background: url("../images/svg/icons/task_icon_accounting_services.svg") no-repeat center center;
+  background-size: contain; }
+
+.task-ico[class*="all_services"] {
+  background: url("../images/svg/icons/task_icon_all_services.svg") no-repeat center center;
+  background-size: contain; }
+
+.task-ico[class*="billing_platform"] {
+  background: url("../images/svg/icons/task_icon_billing_platform.svg") no-repeat center center;
+  background-size: contain; }
+
+.task-ico[class*="cloud_services"] {
+  background: url("../images/svg/icons/task_icon_cloud_services.svg") no-repeat center center;
+  background-size: contain; }
+
+.task-ico[class*="pdf_bills"] {
+  background: url("../images/svg/icons/task_icon_pdf_bills.svg") no-repeat center center;
+  background-size: contain; }
+
+.task-ico[class*="pdf_invoices"] {
+  background: url("../images/svg/icons/task_icon_pdf_invoices.svg") no-repeat center center;
+  background-size: contain; }
+
+.task-ico[class*="sushio_metrics"] {
+  background: url("../images/svg/icons/task_icon_sushio_metrics.svg") no-repeat center center;
+  background-size: contain; }
+
+/* Generic icons
+------------------------------------------------------------------------------*/
+.generic-ico {
+  display: block;
+  width: 2.75em;
+  height: 2.75em;
+  margin: 1em auto; }
+
+.generic-ico[class*="automation"] {
+  background: url("../images/svg/icons/generic_icon_automation.svg") no-repeat center center;
+  background-size: contain; }
+
+.generic-ico[class*="heart"] {
+  background: url("../images/svg/icons/generic_icon_heart.svg") no-repeat center center;
+  background-size: contain; }
+
+.generic-ico[class*="plus"] {
+  background: url("../images/svg/icons/generic_icon_plus.svg") no-repeat center center;
+  background-size: contain; }
+
+.generic-ico[class*="arrow_bottom"] {
+  background: url("../images/svg/icons/generic_icon_arrow_bottom.svg") no-repeat center center;
+  background-size: contain; }
+
+.btn {
+  border: 2px solid #f3f3f5; }
+  .btn:hover {
+    background: #f3f3f5;
+    color: #333333; }
+  .btn.btn-cta {
+    padding: .5em  2em;
+    border: 0.1em solid #333333;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 4em auto;
+    color: #333333; }
+    .btn.btn-cta:hover {
+      background: #333333;
+      color: #f3f3f5; }
+
+/* GLOBAL STYLESHEET
+---------------------------------------------------------------------------*/
+/* base setting
+-----------------------------------------------------------------------*/
+body {
+  background: #f3f3f5; }
+
+/* Jumbotron
+-----------------------------------------------------------------------*/
+.jumbotron {
+  height: 100%;
+  background: #f3f3f5 url("http://38.media.tumblr.com/22619c517a1502b0eb6aa4e3a933006f/tumblr_n6et0idQ131st5lhmo1_1280.jpg") no-repeat center center;
+  background-size: cover;
+  background-position-y: 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0;
+  color: #333333; }
+  .jumbotron h1 {
+    font-size: 3em;
+    margin-top: 60px;
+    font-family: ProximaNova-semibold, "Helvetica", sans-serif; }
+  .jumbotron img {
+    max-width: 80px;
+    clear: both;
+    margin: auto; }
+  .jumbotron .btn {
+    clear: both; }
+
+/* ADDONS
+---------------------------------------------------------------------------*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.fadeOut {
+  -webkit-transition: all, 0.3s ease 0s, opacity 0.3s ease;
+  -moz-transition: all, 0.3s ease 0s, opacity 0.3s ease;
+  transition: all, 0.3s ease 0s, opacity 0.3s ease;
+  opacity: 0; }
+
+.slider li.active {
+  -webkit-animation: appear 0.3s ease;
+  -moz-animation: appear 0.3s ease;
+  animation: appear 0.3s ease;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1); }
+
+@-webkit-keyframes load-one {
+  25% {
+    opacity: 1; }
+
+  50% {
+    opacity: .4; } }
+@-moz-keyframes load-one {
+  25% {
+    opacity: 1; }
+
+  50% {
+    opacity: .4; } }
+@keyframes load-one {
+  25% {
+    opacity: 1; }
+
+  50% {
+    opacity: .4; } }
+@-webkit-keyframes load-two {
+  50% {
+    opacity: 1; }
+
+  75% {
+    opacity: 0.4; } }
+@-moz-keyframes load-two {
+  50% {
+    opacity: 1; }
+
+  75% {
+    opacity: 0.4; } }
+@keyframes load-two {
+  50% {
+    opacity: 1; }
+
+  75% {
+    opacity: 0.4; } }
+@-webkit-keyframes load-three {
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: .4; } }
+@-moz-keyframes load-three {
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: .4; } }
+@keyframes load-three {
+  75% {
+    opacity: 1; }
+
+  100% {
+    opacity: .4; } }
+/* Slider
+--------------------------------------------*/
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+@-moz-keyframes appear {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+@keyframes appear {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+ /*
+
+  If it’s a hack, it goes in shame.css.
+  Document all hacks fully:
+  What part of the codebase does it relate to?
+  Why was this needed?
+  How does this fix it?
+  How might you fix it properly, given more time?
+  Do not blame the developer; if they explained why they had to do it then their reasons are probably (hopefully) valid.
+  Try and clean shame.css up when you have some down time.
+  Even better, get a tech-debt story in which you can dedicate actual sprint time to it.
+
+*/

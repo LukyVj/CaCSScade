@@ -1,0 +1,54 @@
+// ==========================================================================
+// CaCSScade icons settings :
+// ==========================================================================
+
+$icons: "phone", "twitter", "mail", "facebook", "dribbble", "instagram";
+
+@each $icon in $icons {
+  .footer-ico{
+    &[class*="ico-#{($icon)}"]{
+      &:before{
+        @include icon-background('../images/svg/footer/footer_#{($icon)}.svg');
+      }
+    }
+  }
+}
+
+/* SVG Icons
+------------------------------------------------------------------------------*/
+
+.task-ico{
+  display: block;
+  @include square(em(44px));
+  margin: 1em auto;
+}
+
+$icons: "accounting_services", "all_services", "billing_platform", "cloud_services", "pdf_bills", "pdf_invoices", "sushio_metrics";
+
+@each $icon in $icons {
+  .task-ico{
+    &[class*="#{($icon)}"]{
+        @include icon-background('../images/svg/icons/task_icon_#{($icon)}.svg');
+    }
+  }
+}
+
+
+/* Generic icons
+------------------------------------------------------------------------------*/
+
+.generic-ico{
+  display: block;
+  @include square(em(44px));
+  margin: 1em auto;
+}
+
+$icons: "automation", "heart", "plus", "arrow_bottom";
+
+@each $icon in $icons {
+  .generic-ico{
+    &[class*="#{($icon)}"]{
+        @include icon-background('../images/svg/icons/generic_icon_#{($icon)}.svg');
+    }
+  }
+}

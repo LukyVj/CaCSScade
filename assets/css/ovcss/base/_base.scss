@@ -1,0 +1,77 @@
+// ====================================================================================================
+//  Base : This stylesheet will be your base, you will define the main lines of your project stylesheet.
+// ======================================================================================================
+$base-font-weight:300;
+$base-line-height:24px;
+
+
+*{
+  @include high();
+}
+
+html,body{
+  @include reset();
+  @include font-family(#{$font-name}-light, $font-fallback, sans-serif);
+}
+html{
+  overflow-x:hidden;
+}
+
+strong{
+  @include font-family(#{$font-name}-semibold, $font-fallback, sans-serif);
+  font-weight: bold;
+}
+pre{
+  line-height: 1.2;
+  code{line-height: 0;}
+  details{
+    line-height: 1.2;
+    summary{
+      line-height: 1.2;
+    }
+  }
+}
+details{
+  padding: 0;
+  margin:0;
+  clear: none;
+  @include transition(all .2s ease);
+  summary{
+    @include transition(all .2s ease);
+    cursor: pointer;
+    clear: none;
+    padding: 0;
+    margin:0;
+    background: rgba(black, .025);
+    outline: none;
+    padding: .1em;
+
+    &:hover{
+          background: rgba(black, .045);
+
+    }
+    + details{
+      margin-top: -1em;
+    }
+  }
+
+  &[open]{
+    color: #C7254E;
+    summary{
+      background: rgba(black, .1);
+      color: #333;
+
+        + details {
+            summary{
+              background: rgba(black, .025);
+            }
+
+          &[open]{
+            summary{
+               background: rgba(black, .1);
+            }
+          }
+        }
+      }
+    }
+}

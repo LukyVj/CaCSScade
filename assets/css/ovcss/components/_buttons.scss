@@ -1,0 +1,30 @@
+// ==========================================================================
+// CaCSScade buttons settings :
+// ==========================================================================
+
+
+.btn{
+  border: 2px solid $w;
+
+  &:hover{
+    background: $w;
+    color: $bl;
+  }
+
+
+  &.btn-cta{
+    padding:.5em  2em;
+    border: .1em solid $bl;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 4em auto;
+    color: $bl;
+
+    &:hover{
+      background: $bl;
+      color: $white;
+    }
+  }
+}
+
+

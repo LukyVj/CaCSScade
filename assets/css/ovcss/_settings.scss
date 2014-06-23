@@ -1,0 +1,34 @@
+/* ==========================================================================
+OVCSS Settings library :
+========================================================================== */
+
+/* BASE
+---------------------------------------------------------------------------*/
+@import 'base/_normalize.scss';         // Import the mixins.
+@import 'base/core/_variables.scss';         // Import the mixins.
+@import 'base/core/_functions.scss';         // Import the mixins.
+@import 'base/core/_mixins.scss';         // Import the mixins.
+@import 'base/_typography.scss';     // Import your typography stylesheet.
+@import 'base/_base.scss';           // Import your Base Stylesheet.
+@import 'base/_colors.scss';         // Import your colorscheme first.
+@import 'base/_form.scss';           // Import the form stylesheet.
+
+@import 'components/_icons.scss';          // Import the icon fonts.
+@import 'components/_buttons.scss';        // Import the Buttons stylesheet ( After the colors, the typograhy).
+
+@import 'theme/_over-bootstrap.scss'; // Rerwite over bootstrap style
+
+
+
+/* GLOBAL STYLESHEET
+---------------------------------------------------------------------------*/
+@import '_global.scss' ;        // Global stylesheet
+
+
+/* ADDONS
+---------------------------------------------------------------------------*/
+@import 'utils/_classes.scss';        // Import the Classes file.
+@import 'utils/_animations.scss';      // Import the keyframes animations stylesheet.
+@import 'utils/_responsive.scss';     // Responsive stylesheet, for media-queries
+
+@import 'addons/_shame.scss';          // If it's a hack, it goes in shame.css .

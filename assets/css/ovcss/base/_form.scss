@@ -1,0 +1,14 @@
+// ==========================================================================
+// CaCSScade forms settings :
+// ==========================================================================
+
+$placeholder-color: #000;
+form {
+  input{
+    outline: none;
+     @include placeholder {
+       color: $placeholder-color;
+     }
+  }
+}
+
