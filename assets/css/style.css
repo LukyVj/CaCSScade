@@ -462,6 +462,8 @@ details {
       background: #9b59b6; }
 
 .page-section .btn-cta {
+  margin: 1em 0; }
+.page-section .btn-center {
   width: 260px;
   margin: 1em auto;
   display: block;
